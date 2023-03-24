@@ -28,7 +28,7 @@ const localizer = dateFnsLocalizer({
 
 momentLocalizer(moment);
 
-// const DragAndDropCalendar = withDragAndDrop(Calendar);
+const DragAndDropCalendar = withDragAndDrop(Calendar);
 
 interface ChoseDay {
     id?: number;
@@ -52,9 +52,11 @@ export const MyCalendar = () => {
 
     const handleOpenDialogCreate = (e: any) => {
         // @ts-ignore
+        console.log(e);
         const objId = eventArray.length;
 
         setNewEven({ ...newEvent, newStartDate: e.start, newEndDate: e.start, id: objId + 1 })
+
         setModalOpen(true);
     }
 
