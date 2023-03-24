@@ -153,7 +153,7 @@ export const MyCalendar = () => {
     return (
         <DndProvider backend={HTML5Backend}>
             <div>
-                <Calendar
+                <DragAndDropCalendar
                     events={eventArray}
                     localizer={localizer}
                     style={{ height: 700 }}
